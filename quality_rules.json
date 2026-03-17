@@ -1,0 +1,17 @@
+{
+  "quality_rules": [
+    "id must not contain nulls",
+    "id values must be unique",
+    "name must not contain nulls",
+    "name values must be unique",
+    "age values must be unique",
+    "salary values must be unique",
+    "department must not contain nulls",
+    "department values must be unique",
+    "join_date must not contain nulls",
+    "join_date values must be unique"
+  ],
+  "logs": [
+    "Quality rules inferred."
+  ]
+}

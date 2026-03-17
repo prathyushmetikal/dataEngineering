@@ -1,0 +1,11 @@
+﻿id,name,age,salary,department,join_date
+1,Alice,30,55000,HR,43845
+2,Bob,45,72000,Finance,43534
+3,Charlie,28,,IT,44378
+4,Diana,35,68000,Finance,43427
+5,Ethan,40,72000,HR,43615
+6,Farah,29,50000,IT,44606
+7,George,50,85000,Finance,42966
+8,Helen,33,60000,HR,44079
+9,Ian,31,58000,IT,44541
+10,Jane,,75000,Finance,43580

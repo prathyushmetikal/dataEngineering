@@ -1,0 +1,56 @@
+{
+  "inferred_schema": {
+    "id": {
+      "nulls": "int64",
+      "unique": "int",
+      "min": "int64",
+      "max": "int64",
+      "std_dev": "float64",
+      "distribution": "dict"
+    },
+    "name": {
+      "nulls": "int64",
+      "unique": "int",
+      "min": "NoneType",
+      "max": "NoneType",
+      "std_dev": "NoneType",
+      "distribution": "dict"
+    },
+    "age": {
+      "nulls": "int64",
+      "unique": "int",
+      "min": "float64",
+      "max": "float64",
+      "std_dev": "float64",
+      "distribution": "dict"
+    },
+    "salary": {
+      "nulls": "int64",
+      "unique": "int",
+      "min": "float64",
+      "max": "float64",
+      "std_dev": "float64",
+      "distribution": "dict"
+    },
+    "department": {
+      "nulls": "int64",
+      "unique": "int",
+      "min": "NoneType",
+      "max": "NoneType",
+      "std_dev": "NoneType",
+      "distribution": "dict"
+    },
+    "join_date": {
+      "nulls": "int64",
+      "unique": "int",
+      "min": "int64",
+      "max": "int64",
+      "std_dev": "float64",
+      "distribution": "dict"
+    }
+  },
+  "logs": [
+    "Column stats generated.",
+    "Schema inferred from profiling summary."
+  ]
+}

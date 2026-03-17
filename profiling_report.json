@@ -1,0 +1,7 @@
+{
+  "file_path": "src/data/sampletestfilecsv.csv",
+  "report_path": "profiling_report.html",
+  "logs": [
+    "Profiling report generated."
+  ]
+}
