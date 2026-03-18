@@ -8,6 +8,8 @@ def rules_node(state: dict):
     stats = state.get("profiling_summary", {})
     rules = infer_quality_rules(stats)
     return {
+        **state, 
+        #"file_path": state["file_path"], 
         "quality_rules": rules,
         "logs": ["Quality rules inferred."]
     }

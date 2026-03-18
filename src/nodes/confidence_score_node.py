@@ -8,6 +8,7 @@ def confidence_node(state: dict):
     stats = state.get("profiling_summary", {})
     score = compute_confidence_score(stats)
     return {
+        **state, 
         "confidence_score": score,
         "logs": ["Confidence score computed."]
     }

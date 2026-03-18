@@ -17,6 +17,8 @@ def unstructured_profile_node(state: dict) -> dict:
         }
 
     return {
+        **state, 
+        #"file_path": state["file_path"], 
         "inferred_schema": schema,
         "logs": state.get("logs", []) + ["Schema inferred from profiling summary."]
     }

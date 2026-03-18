@@ -15,5 +15,6 @@ def report_node(state: dict) -> dict:
     return {
         **state,
         "report_path": report_info["report_path"],
+        
         "logs": state.get("logs", []) + ["Profiling report generated."]
     }
