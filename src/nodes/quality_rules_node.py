@@ -1,4 +1,4 @@
-from Tools.quality_rules_tool import infer_quality_rules
+from src.tools.quality_rules_tool import infer_quality_rules
 
 def rules_node(state: dict):
     """

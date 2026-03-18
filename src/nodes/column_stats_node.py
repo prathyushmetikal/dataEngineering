@@ -1,5 +1,6 @@
 import pandas as pd
-from Tools.column_stats_tool import generate_column_stats
+
+from src.tools.column_stats_tool import generate_column_stats
 
 def column_stats_node(state: dict):
     state = {"file_path": "src/data/sampletestfilecsv.csv"}

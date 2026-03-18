@@ -9,6 +9,7 @@ dependencies = [
     "langgraph>=1.1.2",
     "pandas<3.0",
     "pytest>=9.0.2",
-    "setuptools>=82.0.1",
+    "setuptools>=70.0.0",
+    "uvicorn>=0.42.0",
     "ydata-profiling>=4.18.1",
 ]
