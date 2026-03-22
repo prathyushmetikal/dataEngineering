@@ -1,0 +1,101 @@
+rules:
+  patient_id:
+    - must_be_unique: true
+    - must_be_positive_integer: true
+    - not_null: true
+
+  first_name:
+    - not_null: true
+    - regex: "^[A-Za-z]+$"
+    - casing: "title"
+
+  last_name:
+    - not_null: true
+    - regex: "^[A-Za-z]+$"
+    - casing: "title"
+
+  gender:
+    - allowed_values: ["Male", "Female", "Other"]
+    - not_null: true
+
+  date_of_birth:
+    - valid_date_format: "YYYY-MM-DD"
+    - not_future_date: true
+    - not_null: true
+
+  age:
+    - range: [0, 120]
+    - not_null: true
+
+  address:
+    - not_null: true
+
+  city:
+    - not_null: true
+
+  state:
+    - regex: "^[A-Z]{2}$"
+    - not_null: true
+
+  zip_code:
+    - regex: "^[0-9]{5}$"
+    - not_null: true
+
+  phone_number:
+    - regex: "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+    - not_null: true
+
+  email:
+    - regex: "^[^@]+@[^@]+\.[^@]+$"
+    - not_null: true
+
+  insurance_provider:
+    - allowed_values: ["BlueCross", "Aetna", "UnitedHealth", "Cigna"]
+    - not_null: true
+
+  policy_number:
+    - not_null: true
+    - regex: "^[A-Z]{2}[0-9]{5}$"
+
+  primary_physician:
+    - not_null: true
+
+  department:
+    - allowed_values: ["Cardiology", "Oncology", "Neurology", "Pediatrics", "Orthopedics"]
+    - not_null: true
+
+  visit_date:
+    - valid_date_format: "YYYY-MM-DD"
+    - not_future_date: true
+    - not_null: true
+
+  diagnosis:
+    - not_null: true
+
+  procedure:
+    - not_null: true
+
+  medication:
+    - not_null: true
+
+  lab_test:
+    - not_null: true
+
+  lab_result:
+    - numeric: true
+    - not_null: true
+
+  admission_date:
+    - valid_date_format: "YYYY-MM-DD"
+    - not_future_date: true
+    - not_null: true
+
+  discharge_date:
+    - valid_date_format: "YYYY-MM-DD"
+    - after: "admission_date"
+    - not_null: true
+
+  billing_amount:
+    - numeric: true
+    - min: 0
+    - not_null: true

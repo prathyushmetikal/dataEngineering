@@ -10,5 +10,6 @@ def confidence_node(state: dict):
     return {
         **state, 
         "confidence_score": score,
-        "logs": ["Confidence score computed."]
+        #"logs": ["Confidence score computed."]
+        "logs": state.get("logs", []) + ["Confidence score computed."]
     }

@@ -4,7 +4,7 @@ import json
 
 from src.nodes.profiling_report_node import report_node
 
-def test_report_node(tmp_path):
+def test_report_node():
     state = {"file_path": "src/data/sampletestfilecsv.csv"}
     result = report_node(state)
     print(result)

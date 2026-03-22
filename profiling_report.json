@@ -1,7 +1,207 @@
 {
-  "file_path": "src/data/sampletestfilecsv.csv",
-  "report_path": "profiling_report.html",
+  "schema": {
+    "patient_id": {
+      "nulls": 0,
+      "unique": 20,
+      "min": 1.0,
+      "max": 20.0,
+      "std_dev": 5.916079783099616
+    },
+    "first_name": {
+      "nulls": 0,
+      "unique": 20,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "last_name": {
+      "nulls": 0,
+      "unique": 20,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "gender": {
+      "nulls": 0,
+      "unique": 2,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "date_of_birth": {
+      "nulls": 0,
+      "unique": 20,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "age": {
+      "nulls": 0,
+      "unique": 19,
+      "min": 25.0,
+      "max": 61.0,
+      "std_dev": 9.800644447124249
+    },
+    "address": {
+      "nulls": 0,
+      "unique": 20,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "city": {
+      "nulls": 0,
+      "unique": 20,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "state": {
+      "nulls": 0,
+      "unique": 16,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "zip_code": {
+      "nulls": 0,
+      "unique": 20,
+      "min": 432.0,
+      "max": 98101.0,
+      "std_dev": 33951.86652318094
+    },
+    "phone_number": {
+      "nulls": 1,
+      "unique": 19,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "email": {
+      "nulls": 1,
+      "unique": 19,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "insurance_provider": {
+      "nulls": 1,
+      "unique": 4,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "policy_number": {
+      "nulls": 1,
+      "unique": 17,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "primary_physician": {
+      "nulls": 1,
+      "unique": 19,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "department": {
+      "nulls": 1,
+      "unique": 5,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "visit_date": {
+      "nulls": 1,
+      "unique": 19,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "diagnosis": {
+      "nulls": 1,
+      "unique": 5,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "procedure": {
+      "nulls": 1,
+      "unique": 5,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "medication": {
+      "nulls": 1,
+      "unique": 4,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "lab_test": {
+      "nulls": 1,
+      "unique": 5,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "lab_result": {
+      "nulls": 1,
+      "unique": 19,
+      "min": 7.8,
+      "max": 15.0,
+      "std_dev": 2.100501193324559
+    },
+    "admission_date": {
+      "nulls": 1,
+      "unique": 19,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "discharge_date": {
+      "nulls": 1,
+      "unique": 19,
+      "min": null,
+      "max": null,
+      "std_dev": null
+    },
+    "billing_amount": {
+      "nulls": 1,
+      "unique": 19,
+      "min": 600.25,
+      "max": 5000.0,
+      "std_dev": 1537.7953901332924
+    }
+  },
+  "llm_analysis": {
+    "issues_found": true,
+    "issues": [
+      "Missing or null data for 'gender' and 'date_of_birth'.",
+      "Invalid date format for 'date_of_birth' in YYYY-MM-DD format.",
+      "Outliers detected for 'age' with values outside the expected range."
+    ],
+    "recommendations": [
+      "Fill missing or null data in 'gender' and 'date_of_birth' fields.",
+      "Correct date format to YYYY-MM-DD in 'date_of_birth' field using appropriate date handling software.",
+      "Impute age within expected range by applying suitable data imputation techniques."
+    ]
+  },
+  "rules": {
+    "baseline_rules": {},
+    "llm_recommendations": []
+  },
   "logs": [
+    "Column stats generated.",
+    "Cleaning pass 1 done.",
+    "Column stats generated.",
+    "Cleaning pass 2 done.",
+    "Column stats generated.",
+    "Schema inferred from profiling summary.",
+    "LLM found issues, flagged for review.",
+    "Quality rules inferred.",
     "Profiling report generated."
   ]
 }

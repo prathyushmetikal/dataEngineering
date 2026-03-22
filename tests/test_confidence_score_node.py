@@ -7,7 +7,7 @@ from src.nodes.confidence_score_node import confidence_node
 import json
 from src.nodes.column_stats_node import column_stats_node
 
-def test_confidence_node_with_csv(tmp_path):
+def test_confidence_node_with_csv():
     # Step 1: Generate profiling summary from the sample CSV
     state = {"file_path": "src/data/sampletestfilecsv.csv"}
     profiling_state = column_stats_node(state)

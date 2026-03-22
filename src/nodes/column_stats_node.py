@@ -1,21 +1,23 @@
 import pandas as pd
-
 from src.tools.column_stats_tool import generate_column_stats
 
-def column_stats_node(state: dict):
-    #state = {"file_path": "src/data/sampletestfilecsv.csv"}
+def column_stats_node(state: dict) -> dict:
+    """
+    Node that generates column statistics using the tool.
+    Expects state["file_path"] to point to the dataset.
+    """
     df = pd.read_csv(state["file_path"])
     stats = generate_column_stats(df)
-    return {**state, "profiling_summary": stats, "logs": ["Column stats generated."]}
 
-    # df = pd.read_excel(state["file_path"])
-    # stats = generate_column_stats(df)
-    #return {"profiling_summary": stats, "logs": ["Column stats generated."]}
+    # Ensure logs is always a list
+    logs = state.get("logs", [])
+    if not isinstance(logs, list):
+        logs = [str(logs)]  # wrap string or other type into a list
 
-# import pandas as pd
-# from Tools.column_stats_tool import generate_column_stats
+    logs.append("Column stats generated.")
 
-# def column_stats_node(state: dict):
-#     df = pd.read_excel(state["file_path"])
-#     stats = generate_column_stats(df)
-#     return {"profiling_summary": stats, "logs": ["Column stats generated."]}
+    return {
+        **state,
+        "profiling_summary": stats,
+        "logs": logs
+    }

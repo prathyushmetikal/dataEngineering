@@ -11,5 +11,6 @@ def rules_node(state: dict):
         **state, 
         #"file_path": state["file_path"], 
         "quality_rules": rules,
-        "logs": ["Quality rules inferred."]
+        #"logs": ["Quality rules inferred."]
+        "logs": state.get("logs", []) + ["Quality rules inferred."]
     }

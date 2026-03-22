@@ -5,11 +5,11 @@ import json
 import pandas as pd
 from src.nodes.column_stats_node import column_stats_node
 
-def test_column_stats_node(tmp_path):
-    state = {"file_path": "src/data/sampletestfilecsv.csv"}
+def test_column_stats_node():
+    state = {"file_path": "src/data/patientdatasample.csv"}
     result = column_stats_node(state)
     print(result)   # <-- this will show the full dictionary in pytest output
-    with open("column_statistics.json", "w") as f:
+    with open("patient_statistics.json", "w") as f:
         json.dump(result, f, indent=2,default=str)
 
     assert "profiling_summary" in result
